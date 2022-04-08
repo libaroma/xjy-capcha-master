@@ -1,9 +1,9 @@
 # xjy-captcha-master
 纯前端点触验证码
 
-##预览
-![](lib/preview/preview.png)
-![](lib/preview/preview1.png)
+## 预览
+![](public/preview/preview.png)
+![](public/preview/preview1.png)
 ## 安装
 ```
 //npm
