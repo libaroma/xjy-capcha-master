@@ -1,24 +1,65 @@
 # xjy-captcha-master
+纯前端点触验证码
 
-## Project setup
+##预览
+![](lib/preview/preview.png)
+![](lib/preview/preview1.png)
+## 安装
 ```
-yarn install
+//npm
+npm i xjy-captcha-master
+//yarn
+yarn add xjy-captcha-master
 ```
+## 使用
+```javascript
+//main.js
+import Vue from "vue"
+import xjyCaptchaMaster from "xjy-captcha-master"
+Vue.component("captcha",xjyCaptchaMaster.captcha)
+```
+```html
+<template>
+    <captcha @close="close" @fail=ha"fail" @success="success" :img-list="['https://files.hyz.cool/files/photos/3298760b6d63211941cf6760539beb56.jpg']"/>
+</template>
 
-### Compiles and hot-reloads for development
+<script>
+    export default {
+       
+        methods: {
+            close() {
+                console.log("close")
+            },
+            fail() {
+                console.log("fail")
+            },
+            success() {
+                console.log("success")
+            }
+        }
+    }
+</script>
 ```
-yarn serve
-```
+## 参数解释
 
-### Compiles and minifies for production
-```
-yarn build
-```
 
-### Lints and fixes files
-```
-yarn lint
-```
+ - img-list:
+ 
+   类型：Array
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+    解释：背景图片Url数组
+
+
+## 回调函数
+
+ - close:
+
+    解释：关闭回调
+    
+ - fail:
+
+    解释：验证失败回调
+    
+ - success:
+
+    解释：验证成功回调

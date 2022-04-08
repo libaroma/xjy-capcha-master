@@ -1,11 +1,13 @@
 {
   "name": "xjy-captcha-master",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.18",
+  "main": "lib/xjy-captcha-master.umd.min.js",
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name xjy-captcha-master --dest lib packages/index.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -13,12 +15,9 @@
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.8",
-    "@vue/cli-plugin-eslint": "~4.5.8",
     "@vue/cli-service": "~4.5.8",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "xjy-captcha-master1": "^0.1.16"
   },
   "eslintConfig": {
     "root": true,
@@ -26,8 +25,7 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
+      "plugin:vue/essential"
     ],
     "parserOptions": {
       "parser": "babel-eslint"
